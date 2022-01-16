@@ -1,0 +1,196 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #cecece;
+    margin: 0;
+}
+.main {
+    margin: 20px auto;
+    display: flex;
+    width: 1200px;
+    box-shadow: 10px 10px 10px rgb(139, 138, 138);
+    font-size: 14px;
+    line-height: 1.2;
+    color: #444C5C;
+}
+.container {
+    padding: 60px 30px 30px 60px;
+    background-color: #FFFFFF;
+}
+.saidbar {
+    max-width: 400px;
+    background-color: #444C5C;
+    color: #E1B16A;
+    font-size: 14px;
+}
+.saidbar__title {
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 1.2;
+}
+.foto__box {
+    margin-top: 30px;
+}
+.foto {
+    display: block;
+    max-width: 100%;
+}
+.dob {
+    margin-top: 16px;
+    text-align: center;
+}
+.saidbar__wrap {
+    padding: 0 30px;
+}
+.contacts {
+    margin-top: 30px;
+}
+.contacts__item {
+    margin-top: 12px;
+}
+.contacts__link {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-decoration: none;
+    fill: #E1B16A;
+    color: #E1B16A;
+}
+.contacts__link:hover .contacts__icon {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    transform: scale(1.5);
+    fill: #CE5A57;
+}
+.contacts__icon {
+    display: inline;
+    margin-right: 10px;
+}
+.skills {
+    margin-top: 30px;
+    list-style-position: inside;
+}
+.skills__item::before {
+    content: "•";
+    margin-right: 10px;
+    color: #CE5A57;
+    display: inline-block;
+    width: 2px;
+}
+.skills__item:not(:last-child) {
+    margin-bottom: 6px;
+}
+.aboutMe__name {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+.aboutMe__prof {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.aboutMe__description {
+    margin-bottom: 30px;
+}
+.projects__title {
+    font-size: 30px;
+}
+.projects__list {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    list-style-position: inside;
+}
+.projects__item {
+    margin-bottom: 30px;
+}
+.projects__itemBox {
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.projects__link {
+    margin-right: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    color: #E1B16A;
+}
+.projects__link:hover {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    color: #CE5A57;
+}
+.projects__technologies {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #CE5A57;
+    font-size: 12px;
+}
+.projects__repository {
+    display: block;
+    margin-top: 8px;
+    margin-left: 10px;
+    text-decoration: none; 
+    color: #E1B16A;  
+    font-size: 12px;
+}
+.projects__repository:hover {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    color: #CE5A57;
+}
+.projects__about {
+    margin-top: 12px;
+    font-weight: bold;
+}
+.projects__description {
+    font-weight: normal;
+}
+.work {
+    margin-bottom: 30px;
+}
+.work__title {
+    font-size: 30px;
+}
+.work__position {
+    margin-top: 30px;
+    font-size: 16px;
+}
+.work__place {
+    font-weight: bold;
+    font-size: 16px;
+    color: #E1B16A; 
+}
+.work__period {
+    margin-top: 8px;
+}
+.main__education {
+    margin-bottom: 30px;
+}
+.education__title {
+    font-size: 30px;
+}
+.education__place {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #E1B16A;
+}
+.education__position {
+    margin-top: 16px;
+}
+.education__period {
+    margin-top: 8px;
+}
+.addition__education{
+    margin-top: 30px;
+}
+
+
