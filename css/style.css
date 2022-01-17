@@ -1,4 +1,4 @@
-
+@media screen, print {
 *{
     margin: 0;
     padding: 0;
@@ -25,7 +25,8 @@ body {
     background-color: #FFFFFF;
 }
 .saidbar {
-    max-width: 400px;
+    width: 500px;
+    padding-top: 30px;
     background-color: #444C5C;
     color: #E1B16A;
     font-size: 14px;
@@ -172,6 +173,10 @@ body {
 .work__period {
     margin-top: 8px;
 }
+.work__about {
+    margin: 16px 0 16px 0;
+    font-family: monospace;
+}
 .main__education {
     margin-bottom: 30px;
 }
@@ -192,5 +197,5 @@ body {
 .addition__education{
     margin-top: 30px;
 }
-
+}
 
