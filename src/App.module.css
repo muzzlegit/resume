@@ -1,0 +1,560 @@
+/* ── ЗМІННІ КОЛЬОРІВ ─────────────────────── */
+:root {
+  /* Фони */
+  --clr-page-bg: #161921;
+  --clr-surface: #1e2130;
+  --clr-surface-raised: #252a3a;
+  --clr-surface-sunken: #1a1e2d;
+
+  /* Бордери */
+  --clr-border: #2a2f42;
+  --clr-border-soft: #252a3a;
+  --clr-border-card: #2e3448;
+
+  /* Текст */
+  --clr-text-heading: #e8ecf8;
+  --clr-text-primary: #c8cfe8;
+  --clr-text-role: #d8deef;
+  --clr-text-strong: #b0b8d4;
+  --clr-text-label: #c0c8e0;
+  --clr-text-body: #7a8299;
+  --clr-text-muted: #5a6280;
+  --clr-text-ghost: #3d4460;
+  --clr-text-faint: #49516c;
+
+  /* Акценти */
+  --clr-accent: #7aa8f5;
+  --clr-accent-bg: rgba(122, 168, 245, 0.07);
+  --clr-accent-bg-md: rgba(122, 168, 245, 0.1);
+  --clr-accent-border: rgba(122, 168, 245, 0.15);
+  --clr-accent-border-md: rgba(122, 168, 245, 0.2);
+  --clr-accent-border-hover: rgba(122, 168, 245, 0.35);
+  --clr-accent-pill: rgba(122, 168, 245, 0.22);
+
+  --clr-amber: #e0a550;
+  --clr-amber-bg: rgba(224, 165, 80, 0.1);
+  --clr-amber-border: rgba(224, 165, 80, 0.2);
+  --clr-amber-glow: rgba(224, 165, 80, 0.04);
+
+  --clr-green: #4ade80;
+}
+
+/* ── СТОРІНКА ────────────────────────────── */
+.page {
+  min-height: 100vh;
+  background: var(--clr-page-bg);
+  display: flex;
+  justify-content: center;
+  padding: 48px 16px;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.resume {
+  width: 100%;
+  max-width: 880px;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: 18px;
+  overflow: hidden;
+  color: var(--clr-text-primary);
+}
+
+/* ── HEADER ──────────────────────────────── */
+.header {
+  position: relative;
+  padding: 48px 52px 40px;
+  border-bottom: 1px solid var(--clr-border-soft);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 40px;
+  overflow: hidden;
+  background: var(--clr-surface-sunken);
+}
+
+.photo {
+  border-radius: 50%;
+  height: 200px;
+}
+
+.headerBg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      ellipse 60% 120% at 100% 50%,
+      var(--clr-accent-bg) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 80% at 0% 100%,
+      var(--clr-amber-glow) 0%,
+      transparent 60%
+    );
+  pointer-events: none;
+}
+
+.headerLeft {
+  position: relative;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 4px 12px;
+}
+
+.badgeBlue {
+  composes: badge;
+  color: var(--clr-accent);
+  background: var(--clr-accent-bg-md);
+  border: 1px solid var(--clr-accent-border-md);
+}
+
+.badgeAmber {
+  composes: badge;
+  color: var(--clr-amber);
+  background: var(--clr-amber-bg);
+  border: 1px solid var(--clr-amber-border);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--clr-green);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.name {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  color: var(--clr-text-heading);
+  margin: 0 0 8px;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--clr-accent);
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--clr-text-muted);
+  margin: 0;
+}
+
+.contacts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--clr-text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.contactItem:hover {
+  color: var(--clr-accent);
+}
+
+.contactIcon {
+  font-size: 14px;
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ── BODY ────────────────────────────────── */
+.body {
+  display: grid;
+  grid-template-columns: 1fr 290px;
+}
+
+.main {
+  padding: 40px 40px 48px 52px;
+  border-right: 1px solid var(--clr-border-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sidebar {
+  padding: 40px 40px 48px 32px;
+  background: var(--clr-surface-sunken);
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* ── SECTION ─────────────────────────────── */
+.sectionLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin: 0 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionLabel::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--clr-border-soft);
+}
+
+/* ── SUMMARY ─────────────────────────────── */
+.summary {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--clr-text-body);
+  margin: 0;
+}
+
+.summary strong {
+  color: var(--clr-text-strong);
+  font-weight: 500;
+}
+
+/* ── STATS ROW ───────────────────────────── */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.statCard {
+  background: var(--clr-surface-raised);
+  border: 1px solid var(--clr-border-card);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.statNum {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--clr-accent);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 11px;
+  color: var(--clr-text-body);
+  line-height: 1.4;
+}
+
+/* ── EXPERIENCE ──────────────────────────── */
+.expList {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.expItem {
+  position: relative;
+  padding-left: 20px;
+}
+
+.expItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: -28px;
+  width: 1px;
+  background: var(--clr-border);
+}
+
+.expItem:last-child::before {
+  display: none;
+}
+
+.expDot {
+  position: absolute;
+  left: -4px;
+  top: 7px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--clr-surface);
+  border: 2px solid var(--clr-accent);
+}
+
+.expHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+
+.expRole {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--clr-text-role);
+  letter-spacing: -0.01em;
+}
+
+.expPeriod {
+  font-size: 11.5px;
+  color: var(--clr-text-ghost);
+  white-space: nowrap;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+.expCompany {
+  font-size: 12.5px;
+  color: var(--clr-accent);
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+
+.expInit {
+  font-size: 13px;
+  text-align: start;
+  margin-left: 12px;
+  font-weight: 600;
+}
+
+.expBullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.expBullets li {
+  text-align: start;
+  font-size: 13px;
+  color: var(--clr-text-body);
+  line-height: 1.6;
+  padding-left: 14px;
+  position: relative;
+}
+
+.expBullets li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: var(--clr-text-ghost);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.expTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.expTag {
+  font-size: 10.5px;
+  color: var(--clr-text-muted);
+  background: var(--clr-surface-raised);
+  border: 1px solid var(--clr-border-card);
+  border-radius: 6px;
+  padding: 3px 9px;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* ── SKILLS ──────────────────────────────── */
+.skillGroup {
+  margin-bottom: 18px;
+}
+
+.skillGroupName {
+  font-size: 10px;
+  color: var(--clr-text-ghost);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 8px;
+}
+
+.skillPills {
+  margin-bottom: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.pill {
+  font-size: 11.5px;
+  color: var(--clr-text-body);
+  background: var(--clr-surface-raised);
+  border: 1px solid var(--clr-border-card);
+  border-radius: 8px;
+  padding: 4px 10px;
+  transition: all 0.15s;
+  cursor: default;
+}
+
+.pill:hover {
+  border-color: var(--clr-accent-border-hover);
+  color: var(--clr-accent);
+}
+
+.pillAccent {
+  composes: pill;
+  color: var(--clr-accent);
+  border-color: var(--clr-accent-pill);
+  background: var(--clr-accent-bg);
+}
+
+/* ── CERTIFICATIONS ──────────────────────── */
+.certList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.certItem {
+  background: var(--clr-surface-raised);
+  border: 1px solid var(--clr-border-card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.certIcon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.certName {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--clr-text-label);
+  margin: 0 0 2px;
+  line-height: 1.3;
+}
+
+.certOrg {
+  font-size: 11px;
+  color: var(--clr-text-ghost);
+  margin: 0;
+}
+
+/* ── EDUCATION ───────────────────────────── */
+.eduItem {
+  margin-bottom: 18px;
+}
+
+.eduDegree {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--clr-text-label);
+  margin: 0 0 2px;
+}
+
+.eduSchool {
+  font-size: 12.5px;
+  color: var(--clr-text-muted);
+  margin: 0 0 2px;
+}
+
+.eduYear {
+  font-size: 11px;
+  color: var(--clr-text-faint);
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* ── LANGUAGES ───────────────────────────── */
+.langList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.langItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.langName {
+  font-size: 13px;
+  color: var(--clr-text-body);
+}
+
+.langLevel {
+  font-size: 10.5px;
+  color: var(--clr-accent);
+  background: var(--clr-accent-bg);
+  border: 1px solid var(--clr-accent-border);
+  border-radius: 100px;
+  padding: 3px 10px;
+}
+
+/* ── RESPONSIVE ──────────────────────────── */
+@media (max-width: 700px) {
+  .header {
+    grid-template-columns: 1fr;
+    padding: 32px 24px 28px;
+  }
+  .body {
+    grid-template-columns: 1fr;
+  }
+  .main {
+    padding: 32px 24px;
+    border-right: none;
+    border-bottom: 1px solid var(--clr-border-soft);
+  }
+  .sidebar {
+    padding: 32px 24px;
+  }
+  .name {
+    font-size: 32px;
+  }
+  .statsRow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
