@@ -122,7 +122,7 @@ function App() {
             {/* Додаткові Навички */}
             <section>
               <p className={styles.sectionLabel}>Додаткові навички</p>
-              <p>Знання веб-розробки</p>
+              <p className={styles.skillSubTitle}>Знання веб-розробки</p>
               {data.додаткові.map((нг, і) => (
                 <div key={і} className={styles.skillGroup}>
                   <p className={styles.skillGroupName}>{нг.група}</p>
