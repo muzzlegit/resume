@@ -63,7 +63,7 @@ function App() {
                       <span className={styles.expPeriod}>{e.період}</span>
                     </div>
                     <p className={styles.expCompany}>{e.компанія}</p>
-
+                    <p className={styles.expInit}>Основні обов'язки:</p>
                     <ul className={styles.expBullets}>
                       {e.пункти.map((p, j) => (
                         <li key={j}>{p}</li>
@@ -71,7 +71,7 @@ function App() {
                     </ul>
                     {e.ініціативи.length ? (
                       <>
-                        <p className={styles.expInit}>Власні ініціативи:</p>
+                        <p className={styles.expInit}>Додатково:</p>
                         <ul className={styles.expBullets}>
                           {e.ініціативи.map((p, j) => (
                             <li key={j}>{p}</li>
