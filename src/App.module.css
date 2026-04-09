@@ -1,17 +1,16 @@
 /* ── ЗМІННІ КОЛЬОРІВ ─────────────────────── */
 :root {
-  /* Фони */
+  /* Темна */
+
   --clr-page-bg: #161921;
   --clr-surface: #1e2130;
   --clr-surface-raised: #252a3a;
   --clr-surface-sunken: #1a1e2d;
 
-  /* Бордери */
   --clr-border: #2a2f42;
   --clr-border-soft: #252a3a;
   --clr-border-card: #2e3448;
 
-  /* Текст */
   --clr-text-heading: #e8ecf8;
   --clr-text-primary: #c8cfe8;
   --clr-text-role: #d8deef;
@@ -22,7 +21,6 @@
   --clr-text-ghost: #3d4460;
   --clr-text-faint: #49516c;
 
-  /* Акценти */
   --clr-accent: #7aa8f5;
   --clr-accent-bg: rgba(122, 168, 245, 0.07);
   --clr-accent-bg-md: rgba(122, 168, 245, 0.1);
@@ -37,6 +35,45 @@
   --clr-amber-glow: rgba(224, 165, 80, 0.04);
 
   --clr-green: #4ade80;
+
+  /*Світла*/
+  /*   
+  --clr-page-bg: #f8fafd; 
+  --clr-surface: #ffffff;
+  --clr-surface-raised: #f0f4fb;
+  --clr-surface-sunken: #e8ecf4;
+
+  
+  --clr-border: #dfe3eb;
+  --clr-border-soft: #e8ecf4;
+  --clr-border-card: #cfd6e4;
+
+
+  --clr-text-heading: #1a1f2e;
+  --clr-text-primary: #2d3448;
+  --clr-text-role: #4b5570;
+  --clr-text-strong: #0f1420;
+  --clr-text-label: #5a6280;
+  --clr-text-body: #6b7494;
+  --clr-text-muted: #8a94b0;
+  --clr-text-ghost: #bcc4d8;
+  --clr-text-faint: #dde3f0;
+
+
+  --clr-accent: #4a90f2; 
+  --clr-accent-bg: rgba(74, 144, 242, 0.07);
+  --clr-accent-bg-md: rgba(74, 144, 242, 0.1);
+  --clr-accent-border: rgba(74, 144, 242, 0.15);
+  --clr-accent-border-md: rgba(74, 144, 242, 0.2);
+  --clr-accent-border-hover: rgba(74, 144, 242, 0.35);
+  --clr-accent-pill: rgba(74, 144, 242, 0.22);
+
+  --clr-amber: #d97706;
+  --clr-amber-bg: rgba(217, 119, 6, 0.1);
+  --clr-amber-border: rgba(217, 119, 6, 0.2);
+  --clr-amber-glow: rgba(217, 119, 6, 0.04);
+
+  --clr-green: #16a34a; */
 }
 
 /* ── СТОРІНКА ────────────────────────────── */
@@ -564,5 +601,9 @@
   }
   .statsRow {
     grid-template-columns: 1fr 1fr;
+  }
+  .photo {
+    height: 100px;
+    width: 100px;
   }
 }
